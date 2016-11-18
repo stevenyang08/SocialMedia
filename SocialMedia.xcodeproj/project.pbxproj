@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		208E32E1108EB9E4EE429657 /* Pods_SocialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB60090BC05C15678C173712 /* Pods_SocialMedia.framework */; };
+		7B4675E51DDFC54E00E17C09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */; };
+		7B4675E91DDFC7B200E17C09 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */; };
 		7BAB23B21DDFC272001EB917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB23B11DDFC272001EB917 /* AppDelegate.swift */; };
-		7BAB23B41DDFC272001EB917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB23B31DDFC272001EB917 /* ViewController.swift */; };
 		7BAB23B71DDFC272001EB917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAB23B51DDFC272001EB917 /* Main.storyboard */; };
 		7BAB23B91DDFC272001EB917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAB23B81DDFC272001EB917 /* Assets.xcassets */; };
 		7BAB23BC1DDFC272001EB917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAB23BA1DDFC272001EB917 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7BAB23AE1DDFC272001EB917 /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAB23B11DDFC272001EB917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BAB23B31DDFC272001EB917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BAB23B61DDFC272001EB917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BAB23B81DDFC272001EB917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BAB23BB1DDFC272001EB917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +42,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B4675E01DDFC4A300E17C09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7B4675E11DDFC4AB00E17C09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7B4675E21DDFC4B100E17C09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7B4675E31DDFC4CC00E17C09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */,
+				7BAB23B11DDFC272001EB917 /* AppDelegate.swift */,
+				7BAB23B81DDFC272001EB917 /* Assets.xcassets */,
+				7BAB23BD1DDFC272001EB917 /* Info.plist */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		7BAB23A51DDFC272001EB917 = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +96,12 @@
 		7BAB23B01DDFC272001EB917 /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
-				7BAB23B11DDFC272001EB917 /* AppDelegate.swift */,
-				7BAB23B31DDFC272001EB917 /* ViewController.swift */,
+				7B4675E21DDFC4B100E17C09 /* Model */,
+				7B4675E11DDFC4AB00E17C09 /* View */,
+				7B4675E01DDFC4A300E17C09 /* Controller */,
+				7B4675E31DDFC4CC00E17C09 /* Utilities */,
 				7BAB23B51DDFC272001EB917 /* Main.storyboard */,
-				7BAB23B81DDFC272001EB917 /* Assets.xcassets */,
 				7BAB23BA1DDFC272001EB917 /* LaunchScreen.storyboard */,
-				7BAB23BD1DDFC272001EB917 /* Info.plist */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
@@ -152,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAB23BC1DDFC272001EB917 /* LaunchScreen.storyboard in Resources */,
+				7B4675E51DDFC54E00E17C09 /* GoogleService-Info.plist in Resources */,
 				7BAB23B91DDFC272001EB917 /* Assets.xcassets in Resources */,
 				7BAB23B71DDFC272001EB917 /* Main.storyboard in Resources */,
 			);
@@ -212,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAB23B41DDFC272001EB917 /* ViewController.swift in Sources */,
+				7B4675E91DDFC7B200E17C09 /* SignInViewController.swift in Sources */,
 				7BAB23B21DDFC272001EB917 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +376,7 @@
 				DEVELOPMENT_TEAM = TP9E7CXU62;
 				INFOPLIST_FILE = SocialMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yato.SocialMedia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yato.socialmedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -354,7 +390,7 @@
 				DEVELOPMENT_TEAM = TP9E7CXU62;
 				INFOPLIST_FILE = SocialMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yato.SocialMedia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yato.socialmedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
