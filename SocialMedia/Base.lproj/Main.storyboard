@@ -90,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="40" width="283" height="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awf-T9-fty" customClass="FancyButton" customModule="SocialMedia" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="283" height="37"/>
@@ -125,6 +125,10 @@
                             <constraint firstItem="q9q-O5-obK" firstAttribute="centerX" secondItem="mFF-VI-uom" secondAttribute="centerX" id="ud7-TO-F1E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6vW-na-5p9" id="0dI-VR-bqL"/>
+                        <outlet property="passwordTextField" destination="A9a-68-RLh" id="o5M-dD-jik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McT-n4-vMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

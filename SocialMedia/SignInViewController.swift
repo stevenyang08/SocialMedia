@@ -13,6 +13,9 @@ import Firebase
 
 class SignInViewController: UIViewController {
 
+  @IBOutlet weak var emailTextField: FancyTextField!
+  @IBOutlet weak var passwordTextField: FancyTextField!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +54,29 @@ class SignInViewController: UIViewController {
     
   @IBAction func signinButtonTapped(_ sender: Any) {
     
+    if let email = emailTextField.text, let password = passwordTextField.text {
+      
+      FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+        
+        if error == nil {
+          print("STEVEN: Email user authenticate with Firebase")
+        } else {
+          
+          print("User doesn't exist")
+          FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+            
+            if error != nil {
+              
+              print("STEVEN: Unable to authenticate with Firebase using email")
+            } else {
+              
+              print("STEVEN: Successfully authenticated with Firebase")
+            }
+          })
+        }
+        
+      })
+    }
 
   }
 
