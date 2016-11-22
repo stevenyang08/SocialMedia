@@ -24,6 +24,7 @@
 /* Begin PBXFileReference section */
 		7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7B6297FB1DE4E93D0020628C /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
 		7BAB23AE1DDFC272001EB917 /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAB23B11DDFC272001EB917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BAB23B61DDFC272001EB917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,11 +82,11 @@
 		7B4675E31DDFC4CC00E17C09 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */,
 				7BAB23B11DDFC272001EB917 /* AppDelegate.swift */,
 				7BEC60941DE218000043F7E0 /* Constants.swift */,
 				7BAB23B81DDFC272001EB917 /* Assets.xcassets */,
 				7BAB23BD1DDFC272001EB917 /* Info.plist */,
+				7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -111,6 +112,7 @@
 		7BAB23B01DDFC272001EB917 /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				7B6297FB1DE4E93D0020628C /* SocialMedia.entitlements */,
 				7B4675E21DDFC4B100E17C09 /* Model */,
 				7B4675E11DDFC4AB00E17C09 /* View */,
 				7B4675E01DDFC4A300E17C09 /* Controller */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TP9E7CXU62;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -396,6 +403,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMedia/SocialMedia.entitlements;
 				DEVELOPMENT_TEAM = TP9E7CXU62;
 				INFOPLIST_FILE = SocialMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -411,6 +419,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMedia/SocialMedia.entitlements;
 				DEVELOPMENT_TEAM = TP9E7CXU62;
 				INFOPLIST_FILE = SocialMedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
