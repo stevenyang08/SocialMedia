@@ -11,6 +11,7 @@
 		7B4675E51DDFC54E00E17C09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */; };
 		7B4675E91DDFC7B200E17C09 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */; };
 		7B6297FD1DE5097C0020628C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6297FC1DE5097C0020628C /* FeedViewController.swift */; };
+		7B6297FF1DE529580020628C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6297FE1DE529580020628C /* CircleImageView.swift */; };
 		7BAB23B21DDFC272001EB917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAB23B11DDFC272001EB917 /* AppDelegate.swift */; };
 		7BAB23B71DDFC272001EB917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAB23B51DDFC272001EB917 /* Main.storyboard */; };
 		7BAB23B91DDFC272001EB917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAB23B81DDFC272001EB917 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7B6297FB1DE4E93D0020628C /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
 		7B6297FC1DE5097C0020628C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		7B6297FE1DE529580020628C /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		7BAB23AE1DDFC272001EB917 /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAB23B11DDFC272001EB917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BAB23B61DDFC272001EB917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				7BEC60961DE21A850043F7E0 /* RoundButton.swift */,
 				7BEC60981DE21CA10043F7E0 /* FancyTextField.swift */,
 				7BEC609A1DE21F210043F7E0 /* FancyButton.swift */,
+				7B6297FE1DE529580020628C /* CircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4675E91DDFC7B200E17C09 /* SignInViewController.swift in Sources */,
+				7B6297FF1DE529580020628C /* CircleImageView.swift in Sources */,
 				7BEC60971DE21A850043F7E0 /* RoundButton.swift in Sources */,
 				7BAB23B21DDFC272001EB917 /* AppDelegate.swift in Sources */,
 				7BEC609B1DE21F210043F7E0 /* FancyButton.swift in Sources */,
