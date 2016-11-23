@@ -10,17 +10,25 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInViewController: UIViewController {
 
   @IBOutlet weak var emailTextField: FancyTextField!
   @IBOutlet weak var passwordTextField: FancyTextField!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    
+    if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+      
+      performSegue(withIdentifier: "goToFeed", sender: nil)
     }
+  }
 
   @IBAction func facebookButtonTapped(_ sender: Any) {
     
@@ -48,6 +56,9 @@ class SignInViewController: UIViewController {
         print("STEVEN: Unable to authenticate with Firebase - \(error)")
       } else {
         print("STEVEN: Successfully authenticate with Firebase")
+        if let user = user {
+          self.completeSignin(id: user.uid)
+        }
       }
     })
   }
@@ -60,6 +71,9 @@ class SignInViewController: UIViewController {
         
         if error == nil {
           print("STEVEN: Email user authenticate with Firebase")
+          if let user = user {
+            self.completeSignin(id: user.uid)
+          }
         } else {
           
           print("User doesn't exist")
@@ -71,13 +85,21 @@ class SignInViewController: UIViewController {
             } else {
               
               print("STEVEN: Successfully authenticated with Firebase")
+              if let user = user {
+                self.completeSignin(id: user.uid)
+              }
             }
           })
         }
         
       })
     }
-
+  }
+  
+  func completeSignin(id: String) {
+    let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+    print("STEVEN: Data saved to keychain \(keychainResult)")
+    performSegue(withIdentifier: "goToFeed", sender: nil)
   }
 
 }

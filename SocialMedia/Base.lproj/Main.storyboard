@@ -77,7 +77,7 @@
                                     <action selector="facebookButtonTapped:" destination="6K0-Id-Vv8" eventType="touchUpInside" id="gm4-cQ-Hpf"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-O5-obK">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-O5-obK">
                                 <rect key="frame" x="46" y="414" width="283" height="117"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vW-na-5p9" customClass="FancyTextField" customModule="SocialMedia" customModuleProvider="target">
@@ -111,6 +111,7 @@
                             <constraint firstItem="qpw-pH-YZ8" firstAttribute="top" secondItem="Gqz-vp-2Pw" secondAttribute="bottom" id="17v-ho-yz0"/>
                             <constraint firstItem="kNe-6A-i8c" firstAttribute="top" secondItem="mFF-VI-uom" secondAttribute="top" id="1fR-bI-yCn"/>
                             <constraint firstItem="aeT-Yf-8kW" firstAttribute="top" secondItem="kNe-6A-i8c" secondAttribute="bottom" constant="8" id="2qH-mx-81N"/>
+                            <constraint firstItem="Gqz-vp-2Pw" firstAttribute="top" secondItem="q9q-O5-obK" secondAttribute="bottom" constant="61" id="7X5-mZ-FNI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q9q-O5-obK" secondAttribute="trailing" constant="30" id="I3K-9I-OlK"/>
                             <constraint firstItem="q9q-O5-obK" firstAttribute="top" secondItem="6CD-kd-WFB" secondAttribute="bottom" constant="40" id="JFr-pV-xlI"/>
                             <constraint firstItem="aeT-Yf-8kW" firstAttribute="trailing" secondItem="mFF-VI-uom" secondAttribute="trailingMargin" id="Kh9-Vw-W2q"/>
@@ -128,11 +129,46 @@
                     <connections>
                         <outlet property="emailTextField" destination="6vW-na-5p9" id="0dI-VR-bqL"/>
                         <outlet property="passwordTextField" destination="A9a-68-RLh" id="o5M-dD-jik"/>
+                        <segue destination="I35-Rw-oyt" kind="show" identifier="goToFeed" id="Msj-UC-1q7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McT-n4-vMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183.75" y="-122.53521126760563"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="HD7-QR-U1v">
+            <objects>
+                <viewController id="I35-Rw-oyt" customClass="FeedViewController" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIz-sv-rpX"/>
+                        <viewControllerLayoutGuide type="bottom" id="7oA-UD-t4r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rdK-0j-dB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwU-6Y-Lld">
+                                <rect key="frame" x="153.5" y="315.5" width="68" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="I35-Rw-oyt" eventType="touchUpInside" id="mZG-9r-1va"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cwU-6Y-Lld" firstAttribute="centerY" secondItem="rdK-0j-dB7" secondAttribute="centerY" id="Y09-hv-2bv"/>
+                            <constraint firstItem="cwU-6Y-Lld" firstAttribute="centerX" secondItem="rdK-0j-dB7" secondAttribute="centerX" id="ctl-3f-Mwx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9AQ-x4-yMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="-123"/>
         </scene>
     </scenes>
     <resources>
