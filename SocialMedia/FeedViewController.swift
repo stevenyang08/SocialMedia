@@ -65,9 +65,16 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let post = posts[indexPath.row]
-    print("STEVEN: \(post.caption)")
     
-    return tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostCellTableViewCell
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as? PostCellTableViewCell {
+      
+      cell.configureCell(post: post)
+      return cell
+    } else {
+      
+      return PostCellTableViewCell()
+    }
+    
   }
   
 }

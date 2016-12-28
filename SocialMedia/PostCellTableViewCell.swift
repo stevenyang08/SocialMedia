@@ -15,10 +15,27 @@ class PostCellTableViewCell: UITableViewCell {
   @IBOutlet weak var postImage: UIImageView!
   @IBOutlet weak var caption: UITextView!
   @IBOutlet weak var likesLabel: UILabel!
-
+  
+  var post: Post!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
+  }
+  
+  func configureCell(post: Post) {
+    self.post = post
+    self.caption.text = post.caption
+    if let like = post.likes {
+      self.likesLabel.text = "\(like)"
+    }
+    
+//    if let url = NSURL(string: post.imageURL) as? URL {
+//      if let data = NSData(contentsOf: url) as? Data {
+//        self.postImage.image = UIImage(data: data)
+//      }
+//    }
+
   }
 
 }
