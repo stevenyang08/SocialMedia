@@ -20,7 +20,11 @@ class FeedViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     
-    // Do any additional setup after loading the view.
+    DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+      
+      print(snapshot.value as Any)
+    })
+    
   }
 
   @IBAction func signOutButtonTapped(_ sender: Any) {
