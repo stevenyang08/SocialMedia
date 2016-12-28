@@ -13,14 +13,21 @@ import SwiftKeychainWrapper
 class FeedViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
-
+  @IBOutlet weak var imageAddButton: CircleImageView!
+  
   var posts = [Post]()
+  var imagePicker: UIImagePickerController!
+  static var imageCache: NSCache<NSString, UIImage> = NSCache()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     tableView.delegate = self
     tableView.dataSource = self
+    
+    imagePicker = UIImagePickerController()
+    imagePicker.allowsEditing = true
+    imagePicker.delegate = self
     
     DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
       
@@ -47,10 +54,14 @@ class FeedViewController: UIViewController {
     dismiss(animated: true, completion: nil)
   }
 
+  @IBAction func addImageButtonTapped(_ sender: Any) {
+    present(imagePicker, animated: true, completion: nil)
+  }
+  
 
 }
 
-extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
+extension FeedViewController: UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   func numberOfSections(in tableView: UITableView) -> Int {
     
@@ -67,14 +78,35 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     let post = posts[indexPath.row]
     
     if let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as? PostCellTableViewCell {
-      
-      cell.configureCell(post: post)
-      return cell
+            
+      if let img = FeedViewController.imageCache.object(forKey: post.imageURL as NSString) {
+        
+        cell.configureCell(post: post, image: img)
+        return cell
+      } else {
+        
+        cell.configureCell(post: post)
+        return cell
+      }
+
     } else {
       
       return PostCellTableViewCell()
     }
     
   }
+  
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+      imageAddButton.image = image
+    } else {
+      print("STEVEN: A valid image wasn't selected")
+    }
+    
+    imagePicker.dismiss(animated: true, completion: nil)
+  }
+  
+  
+  
   
 }

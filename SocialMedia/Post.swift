@@ -14,11 +14,11 @@ class Post {
   private var _likes: Int!
   private var _postKey: String!
   
-  var caption: String {
+  var caption: String! {
     return _caption
   }
   
-  var imageURL: String {
+  var imageURL: String! {
     return _imageURL
   }
   
@@ -26,7 +26,7 @@ class Post {
     return _likes
   }
   
-  var postKey: String {
+  var postKey: String! {
     return _postKey
   }
   

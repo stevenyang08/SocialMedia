@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6K0-Id-Vv8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6K0-Id-Vv8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -185,13 +185,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ8-Mu-4Os">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="iZo-G3-KBo" customClass="CircleImageView" customModule="SocialMedia" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="iZo-G3-KBo" customClass="CircleImageView" customModule="SocialMedia" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="QaO-ez-gAI"/>
                                                     <constraint firstAttribute="width" constant="49" id="erM-i8-SJI"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="x2a-TC-yc8" appends="YES" id="fx9-X8-9pV"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2W0-CH-dhx" customClass="FancyTextField" customModule="SocialMedia" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -350,6 +354,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAddButton" destination="iZo-G3-KBo" id="mRH-xa-2dM"/>
                         <outlet property="tableView" destination="q99-5c-7z4" id="itf-1r-tI0"/>
                     </connections>
                 </viewController>
@@ -357,6 +362,11 @@
                 <tapGestureRecognizer id="CHi-9w-C57">
                     <connections>
                         <action selector="signOutButtonTapped:" destination="I35-Rw-oyt" id="60S-hT-C94"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="x2a-TC-yc8">
+                    <connections>
+                        <action selector="addImageButtonTapped:" destination="I35-Rw-oyt" id="Uk9-Ur-jAV"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

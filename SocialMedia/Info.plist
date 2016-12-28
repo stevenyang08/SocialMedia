@@ -41,27 +41,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-  <key>CFBundleURLTypes</key>
-  <array>
-    <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb987356771368953</string>
-      </array>
-    </dict>
-  </array>
-  <key>FacebookAppID</key>
-  <string>987356771368953</string>
-  <key>FacebookDisplayName</key>
-  <string>Soci­a­l­M­edia</string>
-  <key>LSApplicationQueriesSchemes</key>
-  <array>
-    <string>fbapi</string>
-    <string>fb-messenger-api</string>
-    <string>fbauth2</string>
-    <string>fbshareextension</string>
-  </array>
-  <key>NSPhotoLibraryUsageDescription</key>
-  <string>{human-readable reason for photo access}</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb987356771368953</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>987356771368953</string>
+	<key>FacebookDisplayName</key>
+	<string>Soci­a­l­M­edia</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow Access To Photo is Required for Posting</string>
 </dict>
 </plist>
