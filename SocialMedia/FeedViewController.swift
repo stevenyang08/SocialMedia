@@ -34,6 +34,8 @@ class FeedViewController: UIViewController {
     
     DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
       
+      self.posts = []
+      
       if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
         
         for snap in snapshot {
@@ -47,6 +49,23 @@ class FeedViewController: UIViewController {
       }
       self.tableView.reloadData()
     })
+  }
+  
+  func postToFirebase(imageURL: String) {
+    
+    let post: Dictionary<String, Any> = [
+      "caption": captionField.text! as String,
+      "imgURL": imageURL as String,
+      "likes": 0 as Int
+    ]
+
+    let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+    firebasePost.setValue(post)
+    
+    captionField.text = ""
+    imageSelected = false
+    imageAddButton.image = UIImage(named: "add-image")
+    tableView.reloadData()
   }
 
   @IBAction func signOutButtonTapped(_ sender: Any) {
@@ -92,7 +111,10 @@ class FeedViewController: UIViewController {
           print("STEVEN: Unable to upload image to Firebase storage")
         } else {
           print("STEVEN: Successfully uploaded image to Firebase storage")
-          let downloadURL = metaData.downloadURL()?.absoluteString
+          let downloadURL = metadata?.downloadURL()?.absoluteString
+          if let url = downloadURL {
+            self.postToFirebase(imageURL: url)
+          }
         }
       }
     }

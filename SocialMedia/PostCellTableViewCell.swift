@@ -16,6 +16,7 @@ class PostCellTableViewCell: UITableViewCell {
   @IBOutlet weak var postImage: UIImageView!
   @IBOutlet weak var caption: UITextView!
   @IBOutlet weak var likesLabel: UILabel!
+  @IBOutlet weak var likeImage: UIImageView!
   
   var post: Post!
   
