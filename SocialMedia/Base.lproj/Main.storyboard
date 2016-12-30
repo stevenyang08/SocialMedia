@@ -130,11 +130,107 @@
                         <outlet property="emailTextField" destination="6vW-na-5p9" id="0dI-VR-bqL"/>
                         <outlet property="passwordTextField" destination="A9a-68-RLh" id="o5M-dD-jik"/>
                         <segue destination="I35-Rw-oyt" kind="show" identifier="goToFeed" id="Msj-UC-1q7"/>
+                        <segue destination="Dcu-uz-osj" kind="show" identifier="loginToCreate" id="Mbp-t8-JeJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McT-n4-vMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183.75" y="-122.53521126760563"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="9fS-kD-ugE">
+            <objects>
+                <viewController id="Dcu-uz-osj" customClass="CreateAccountViewController" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2l5-lL-mPB"/>
+                        <viewControllerLayoutGuide type="bottom" id="mIZ-Za-LSY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pys-CQ-XWo" customClass="CircleImageView" customModule="SocialMedia" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-9T-YpG" customClass="FancyView" customModule="SocialMedia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-84-a3h">
+                                        <rect key="frame" x="90" y="25" width="195" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="k8o-84-a3h" secondAttribute="trailing" constant="90" id="6vS-Rp-gwT"/>
+                                    <constraint firstItem="k8o-84-a3h" firstAttribute="top" secondItem="EUa-9T-YpG" secondAttribute="top" constant="25" id="XZ1-Rb-Io7"/>
+                                    <constraint firstAttribute="height" constant="150" id="d0q-DL-pK6"/>
+                                    <constraint firstAttribute="bottom" secondItem="k8o-84-a3h" secondAttribute="bottom" constant="25" id="kis-tb-hlT"/>
+                                    <constraint firstItem="k8o-84-a3h" firstAttribute="leading" secondItem="EUa-9T-YpG" secondAttribute="leading" constant="90" id="oEw-JP-8ab"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZAi-Px-6qG" customClass="CircleImageView" customModule="SocialMedia" customModuleProvider="target">
+                                <rect key="frame" x="112" y="190" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0u8-O4-jpz"/>
+                                    <constraint firstAttribute="height" constant="150" id="hRW-oh-J3R"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create a Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkz-gn-Um0" customClass="FancyTextField" customModule="SocialMedia" customModuleProvider="target">
+                                <rect key="frame" x="46" y="380" width="283" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="Rj1-bN-mvS"/>
+                                    <constraint firstAttribute="height" constant="35" id="yxi-b7-g5v"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znE-6D-HPF" customClass="FancyButton" customModule="SocialMedia" customModuleProvider="target">
+                                <rect key="frame" x="46" y="435" width="283" height="37"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="EYi-mC-gDW"/>
+                                    <constraint firstAttribute="height" constant="37" id="TTi-xv-GCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="Dcu-uz-osj" eventType="touchUpInside" id="XAL-Un-TGn"/>
+                                    <action selector="signinButtonTapped:" destination="6K0-Id-Vv8" eventType="touchUpInside" id="wOr-Xg-Xbo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2H-AG-Yri">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="X3U-1i-1WP"/>
+                                    <constraint firstAttribute="width" constant="375" id="a8K-xV-HEB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EUa-9T-YpG" firstAttribute="top" secondItem="pys-CQ-XWo" secondAttribute="top" id="7bC-Wp-aS7"/>
+                            <constraint firstItem="ZAi-Px-6qG" firstAttribute="top" secondItem="EUa-9T-YpG" secondAttribute="bottom" constant="40" id="Aht-yP-Sd8"/>
+                            <constraint firstItem="znE-6D-HPF" firstAttribute="top" secondItem="lkz-gn-Um0" secondAttribute="bottom" constant="20" id="DNj-PE-tYR"/>
+                            <constraint firstItem="ZAi-Px-6qG" firstAttribute="centerX" secondItem="pys-CQ-XWo" secondAttribute="centerX" id="F1z-T1-XqQ"/>
+                            <constraint firstItem="lkz-gn-Um0" firstAttribute="top" secondItem="ZAi-Px-6qG" secondAttribute="bottom" constant="40" id="U8w-PN-cXa"/>
+                            <constraint firstAttribute="trailing" secondItem="EUa-9T-YpG" secondAttribute="trailing" id="a6r-aV-5WK"/>
+                            <constraint firstItem="B2H-AG-Yri" firstAttribute="centerX" secondItem="pys-CQ-XWo" secondAttribute="centerX" id="dlp-nu-1XM"/>
+                            <constraint firstItem="lkz-gn-Um0" firstAttribute="centerX" secondItem="pys-CQ-XWo" secondAttribute="centerX" id="etC-Da-SmR"/>
+                            <constraint firstItem="znE-6D-HPF" firstAttribute="centerX" secondItem="pys-CQ-XWo" secondAttribute="centerX" id="sIw-3X-ysX"/>
+                            <constraint firstItem="EUa-9T-YpG" firstAttribute="leading" secondItem="pys-CQ-XWo" secondAttribute="leading" id="smU-Ul-rjt"/>
+                            <constraint firstItem="mIZ-Za-LSY" firstAttribute="top" secondItem="B2H-AG-Yri" secondAttribute="bottom" id="yAO-HX-ubn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileImage" destination="ZAi-Px-6qG" id="bVK-vl-4Ny"/>
+                        <outlet property="usernameTextField" destination="lkz-gn-Um0" id="VZ6-XL-Ezz"/>
+                        <segue destination="I35-Rw-oyt" kind="show" identifier="createToFeed" id="HNp-VN-lMg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIu-Nf-RP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.20000000000005" y="-613.04347826086962"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="HD7-QR-U1v">
@@ -375,7 +471,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="-123.68815592203899"/>
+            <point key="canvasLocation" x="1548" y="-123"/>
         </scene>
     </scenes>
     <resources>
@@ -389,4 +485,7 @@
         <image name="profile" width="113" height="155"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HNp-VN-lMg"/>
+    </inferredMetricsTieBreakers>
 </document>

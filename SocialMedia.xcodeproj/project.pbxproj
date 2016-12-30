@@ -10,6 +10,7 @@
 		208E32E1108EB9E4EE429657 /* Pods_SocialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB60090BC05C15678C173712 /* Pods_SocialMedia.framework */; };
 		7B4675E51DDFC54E00E17C09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */; };
 		7B4675E91DDFC7B200E17C09 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */; };
+		7B61D0AD1E15D8D90036A7EB /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B61D0AC1E15D8D90036A7EB /* CreateAccountViewController.swift */; };
 		7B6297FD1DE5097C0020628C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6297FC1DE5097C0020628C /* FeedViewController.swift */; };
 		7B6297FF1DE529580020628C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6297FE1DE529580020628C /* CircleImageView.swift */; };
 		7B6298011DE533D30020628C /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6298001DE533D30020628C /* PostCellTableViewCell.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		7B4675E41DDFC54E00E17C09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7B61D0AC1E15D8D90036A7EB /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		7B6297FB1DE4E93D0020628C /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
 		7B6297FC1DE5097C0020628C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7B6297FE1DE529580020628C /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				7B4675E81DDFC7B200E17C09 /* SignInViewController.swift */,
 				7B6297FC1DE5097C0020628C /* FeedViewController.swift */,
+				7B61D0AC1E15D8D90036A7EB /* CreateAccountViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				7BEC60971DE21A850043F7E0 /* RoundButton.swift in Sources */,
 				7B982C2B1E1462BC00D3EA00 /* Post.swift in Sources */,
 				7B6298011DE533D30020628C /* PostCellTableViewCell.swift in Sources */,
+				7B61D0AD1E15D8D90036A7EB /* CreateAccountViewController.swift in Sources */,
 				7BAB23B21DDFC272001EB917 /* AppDelegate.swift in Sources */,
 				7BBFD0A91DECFB5100240702 /* DataService.swift in Sources */,
 				7BEC609B1DE21F210043F7E0 /* FancyButton.swift in Sources */,

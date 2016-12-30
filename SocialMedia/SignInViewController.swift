@@ -45,7 +45,6 @@ class SignInViewController: UIViewController {
         self.firebaseAuthenticate(credential)
       }
     }
-    
   }
   
   func firebaseAuthenticate(_ credential: FIRAuthCredential) {
